@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+body{
+    background-color: rgb(81, 95, 139);
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    padding: 0 20px;
+    border-bottom: 1px solid rgb(241, 183, 111);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color: rgb(241, 183, 111);
+}
+
+.header-principal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header-titulo{
+    font-size: 1.3rem;
+    color: rgb(241, 183, 111);
+}
+
+.header-nav ul{
+    display: flex;
+}
+
+.header-nav ul li{
+    list-style: none;
+}
+
+.header-nav ul li a{
+    text-decoration: none;
+    padding: 0 20px;
+}
+
+.header-nav ul li a:hover{
+    color: rgb(241, 238, 9);
+    background-color: rgba(77, 66, 25, 0.507);
+    border-radius: 50px;
+}
+
+#header_menutoggle{ 
+    color: rgb(241, 183, 111);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    display: none;
+}
+
+.header.maior{
+    height: 70px;
+}
+
+.header-principal.flex{
+    flex-direction: column;
+}
+
+.header-nav.open{
+    top: 50px;
+    display: flex;
+}
+
+main section{
+    width: 100%;
+    height: 700px;
+}
+
+.cronologia{
+    background-color: #515f8b;
+    color: rgb(241, 183, 111);
+}
+.obras{
+    background-color: rgb(241, 183, 111);
+    color: #515f8b;
+}
+.setores{
+    background-color: rgb(26, 51, 133);
+    color: white;
+}
+
+
+@media (max-width: 620px){
+    .header-nav{
+        display: none;
+    }
+    #header_menutoggle{
+        display: block;
+    }
+}
+
+@media (max-width: 320px){
+    header{
+        padding: 0 10px;
+    }
+    .header-titulo{
+        font-size: 1rem;
+    }
+    #header_menutoggle{ 
+        font-size: 15px;
+    }
+}
+
+
+
