@@ -11,7 +11,9 @@ body{
     background-color: rgb(81, 95, 139);
 }
 
-header{
+/* HEADER */
+
+.header{
     width: 90%;
     height: 50px;
     padding: 0 20px;
@@ -22,7 +24,7 @@ header{
     justify-content: space-between;
 }
 
-header a{
+.header a{
     color: rgb(241, 183, 111);
 }
 
@@ -66,11 +68,11 @@ header a{
     display: none;
 }
 
-.header.maior{
+.header.widht{
     height: 70px;
 }
 
-.header-principal.flex{
+.header-principal.display{
     flex-direction: column;
 }
 
@@ -79,23 +81,41 @@ header a{
     display: flex;
 }
 
-main section{
-    width: 100%;
-    height: 700px;
+/* MAIN */
+
+main{
+    min-width: 100%;
 }
 
 main section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    flex-direction: column;
+    min-height: 100vh;
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #515f8b;
+    color: rgb(241, 183, 111);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
 }
 
 .cronologia, .cronologia a{
     background-color: #515f8b;
     color: rgb(241, 183, 111);
 }
+
 .obras, .obras a{
     background-color: rgb(241, 183, 111);
     color: #515f8b;
@@ -105,8 +125,43 @@ main section{
     color: white;
 }
 
+.cronologia{
+    margin: 0 60px;
+    overflow: hidden;
+}
 
-@media (max-width: 620px){
+.slider-container {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    min-height: 100vh;
+}
+
+.slide {
+    min-width: 100%;
+    padding: 0 30px;
+}
+.slide h2{
+    font-size: 1.5rem;
+    padding-top: 10px;
+}
+
+.slide h3{
+    font-size: 1rem;
+    padding-top: 10px;
+}
+
+.slide ul li{
+    font-size: 0.9rem;
+}
+
+.setores, .obras{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 50px;
+}
+
+@media (max-width: 680px){
     .header-nav{
         display: none;
     }
@@ -115,15 +170,19 @@ main section{
     }
 }
 
-@media (max-width: 320px){
+@media (max-width: 360px){
     header{
-        padding: 0 10px;
+        padding: 0 5px;
+        width: 95%;
     }
     .header-titulo{
         font-size: 1rem;
     }
     #header_menutoggle{ 
         font-size: 15px;
+    }
+    .header-nav ul li a{
+        padding: 0 8px;
     }
 }
 
