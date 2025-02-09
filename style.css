@@ -139,6 +139,12 @@ main section{
 .slide {
     min-width: 100%;
     padding: 0 30px;
+    display: flex;
+}
+
+.slide-info{
+    width: 50%;
+    padding: 0 50px;
 }
 .slide h2{
     font-size: 1.5rem;
@@ -160,6 +166,8 @@ main section{
     gap: 20px;
     padding-top: 50px;
 }
+
+/* @MEDIA */
 
 @media (max-width: 680px){
     .header-nav{
